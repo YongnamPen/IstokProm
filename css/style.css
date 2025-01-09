@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
 * {
     padding: 0;
     margin: 0;
@@ -157,12 +158,69 @@ header {
     color: #7C7C7C;
 }
 
+/* Burger */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    font-weight: 300;
+    font-size: 24px;
+    color: #202020;
+}
+.burger-menu {
+    display: none; 
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute; 
+    top: 20px; 
+    right: 20px;
+}
+.burger-menu span {
+    display: flex;
+    width: 26px;
+    height: 3px;
+    border-radius: 2px;
+    background: #4C70B5;
+}
+.burger-menu span:nth-child(2) {
+    width: 70%;
+}
+.nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+.nav-links.active {
+    display: flex;
+    background-color: #FFFFFF;
+}
+
 /* Первая страница */
 
 .main {
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
 }
 h1 {
     font-family: "Manrope";
@@ -542,10 +600,10 @@ button.detailsProducts:hover {
 .istokpromContainer {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
 }
 .istokpromImg img {
-    width: calc(23.1vw + 214.2px);
+    width: 560px;
+    height: 452px;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
@@ -554,7 +612,8 @@ button.detailsProducts:hover {
     background-color: #FFFFFF;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
-    width: 678px;
+    width: 670px;
+    height: 452px;
 }
 .istokpromInfo h2 {
     margin-bottom: 24px;
@@ -594,13 +653,13 @@ button.detailsProducts:hover {
 .stageWrapper {
     display: flex;
     flex-direction: column;
-    gap: 31px;
+    gap: 20px;
     padding: calc(2vw + 9.5px) 0 calc(1vw + 16.8px);
 }
 .stageCointainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 31px;
+    gap: 20px;
 }
 .stageInfo {
     display: flex;
@@ -646,8 +705,8 @@ button.detailsProducts:hover {
 .workerContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
-    margin-bottom: calc(1.4vw + 11.7px);
+    gap: 30px;
+    margin-bottom: 30px;
 }
 .workerContainer:last-child {
     margin-bottom: 0;
@@ -656,9 +715,11 @@ button.detailsProducts:hover {
     display: flex;
     background-color: #d1dbeb;
     border-radius: 16px;
+    width: 600px;
 }
 .workerWrapper img {
-    width: calc(15.9vw + 29px);
+    width: 268px;
+    height: 268px;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
 }
@@ -682,10 +743,11 @@ button.detailsProducts:hover {
     flex-wrap: wrap;
     background-color: #4C70B5;
     border-radius: 16px;
+    width: 600px;
 }
 .workerActionInfo {
     padding: calc(0.7vw + 17.9px) calc(1.3vw + 16px) calc(1vw + 12.7px) calc(1.7vw + 14.6px);
-    max-width: calc(9.7vw + 185.8px);
+    max-width: 280px;
 }
 .workerActionInfo p {
     font-family: "Manrope";
@@ -708,8 +770,11 @@ button.detailsProducts:hover {
     padding: 16px calc(1.5vw + 12.5px);
 }
 .workerAction img {
-    width: 272px;
-    margin-top: calc(0.3vw + 15px);
+    width: 310px;
+    height: 270px;
+    padding-top: 40px;
+    padding-right: 20px;
+    
 }
 
 /* Восьмая страница */
@@ -869,8 +934,12 @@ button.detailsProducts:hover {
 /* Footer */
 
 footer {
-    background-color: #d1dbeb;
-    padding: calc(2vw + 33.5px) calc(18vw - 41.5px) calc(2vw + 33.5px) calc(9.7vw - 15px);
+    background-image: url('/img/footer_img.png');
+    background-repeat: no-repeat;
+    background-size: 254px;
+    background-position: top 285px left 476px;
+    background-color: #EDEFF3;
+    padding: calc(2vw + 33.5px) calc(17.3vw - 39.3px) calc(2vw + 33.5px) calc(9.7vw - 15px);
     max-width: 1500px;
 }
 .footer-container {
@@ -969,7 +1038,7 @@ footer {
 }
 .footer-column ul li a:hover {
     color: #E1004A;
-    text-decoration: overline;
+    text-decoration: underline;
 }
 /* Правая часть footer */
 .footer-column-right {
@@ -1012,6 +1081,7 @@ footer {
     padding: 16px 40px;
     font-size: 14px;
     border-radius: 5px;
+    width: 166px;
 }
 .footer-form button:hover {
     font-family: "Manrope";
@@ -1028,11 +1098,22 @@ footer {
 @media (max-width: 320px) {
     /* Header */
     header {
+        max-width: 320px;
         padding-top: 6px;
         padding-bottom: 6px;
         padding-left: 16px;
     }
     .header-left, .header-search, .header-contacts {
+        display: none;
+    }
+    section {
+        max-width: 320px;
+    }
+    /* Burger */
+    .burger-menu {
+        display: flex;
+    }
+    .nav-links {
         display: none;
     }
     /* Первая страница */
@@ -1179,6 +1260,8 @@ footer {
     }
     /* Пятая страница */
     .istokpromImg img {
+        width: 288px;
+        height: 240px;
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
         border-bottom-left-radius: 0;
@@ -1189,14 +1272,34 @@ footer {
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
         border-top-right-radius: 0;
+        height: 620px;
     }
     /* Седьмая страница */
+    .workerContainer {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .workerWrapper {
+        width: 288px;
+        height: 157px;
+    }
+    .workerInfo {
+        max-width: 207px;
+        padding-right: 30px;
+    }
+    .workerWrapper img {
+        width: 80px;
+        height: 157px;
+    }
     .workerAction {
-        height: 288px;
+        display: flex;
+        flex-direction: column;
         overflow: hidden;
+        width: 288px;
     }
     .workerAction img {
-        padding: 16px 60px;
+        height: 149px;
+        padding: 16px 70px 0px 50px;
         margin-top: 0;
     }
     .workerActionInfo p {
@@ -1241,10 +1344,47 @@ footer {
         width: 0;
     }
     /* footer */
+    footer {
+        position: relative;
+        background: none;
+        overflow: hidden;
+    }
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/img/footer_img.png'); /* Путь к изображению */
+        background-repeat: no-repeat;
+        background-position: top 770px left -10px;
+        background-size: 314px;
+        background-color: #EDEFF3;
+        transform: rotate(180deg); /* Поворот фона */
+        z-index: -1; /* Отправляем фон под содержимое футера */
+    }
+    .footer-container {
+        position: relative;
+        z-index: 1;
+    }
+    .footer-background {
+        background-image: url('/img/footer_img.png');
+        background-repeat: no-repeat;
+        background-position: top 10px left 86px;
+        transform: rotate(180deg);
+    }
+    .footer-logo {
+        padding: 0 243px 32px 0;
+        height: 118px;
+    }
     .footer-container {
         gap: 0;
     }
     .footer-column-left {
         padding: 0;
+    }
+    .footer-form button {
+        width: 288px;
     }
 }
