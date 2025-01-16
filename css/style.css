@@ -28,6 +28,13 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+.splide__arrow svg {
+    fill: #C2C2C2;
+}
+.splide__arrow {
+    background-color: #FFFFFF;
+    border: 1px solid #C2C2C2;
+}
 .splide__arrow:hover {
     background-color: #D44D60;
     color: white;
@@ -48,6 +55,7 @@ header {
     padding-bottom: 14px;
     padding-left: 130px;
     max-width: 1500px;
+    box-shadow: 0px 4px 16px #18181814;
 }
 .header-container {
     display: flex;
@@ -77,11 +85,17 @@ header {
     color: #7C7C7C;
     line-height: 14px;
 }
-.pin span {
+.pin a {
     font-weight: 700;
     font-size: 12px;
     color: #D44D60;
     text-decoration: underline;
+}
+.pin a:hover {
+    cursor: pointer;
+}
+.pin a:active {
+    color: #4C70B5;
 }
 .header-nav {
     display: flex;
@@ -92,18 +106,28 @@ header {
     font-size: 14px;
     line-height: 16.4px;
 }
+.header-nav a:hover {
+    color: #E1004A;
+}
+.header-nav a:active {
+    border: none;
+    background-color: #E1004A;
+    color: #FFFFFF;
+    border-radius: 4px;
+    line-height: 16.4px;
+}
 .header-search {
     display: flex;
     align-items: center;
     margin-left: 40px;
-    border: 1px solid #C2C2C2;
+    border: 1px solid #4C70B5;
 }
 .header-search img {
     padding-left: 8px;
 }
 .header-search input {
     padding: 8px;
-    color: #C2C2C2;
+    color: #202020;
     border: none;
     border-radius: 4px;
     width: 304px;
@@ -129,6 +153,10 @@ header {
     line-height: 20px;
     color: #4C70B5;
 }
+.header-phoneText p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 .header-phoneText span {
     font-weight: 400;
     font-size: 14px;
@@ -144,6 +172,9 @@ header {
     flex-direction: column;
     gap: 4px;
     width: 174px;
+}
+.header-mailText a:hover {
+    text-decoration: underline;
 }
 .header-mailText a {
     font-weight: 400;
@@ -164,10 +195,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
 }
 .nav-links li {
     margin: 0 15px;
@@ -202,6 +229,7 @@ header {
 .nav-links {
     display: none;
     flex-direction: column;
+    align-items: baseline;
     text-align: center;
     position: absolute;
     top: 60px;
@@ -211,7 +239,7 @@ header {
 }
 .nav-links.active {
     display: flex;
-    background-color: #FFFFFF;
+    background-color: #948f8f;
 }
 
 /* Первая страница */
@@ -283,7 +311,7 @@ button.details {
 button.details:hover {
     background-color: #D44D60;
     color: #FFFFFF;
-    border: none;
+    border: 1px solid #D44D60;
     padding: 16px 40px;
 }
 .background {
@@ -342,6 +370,7 @@ h1, p, .infoWrapper, .cta {
     max-width: calc(8.8vw + 259.7px);
     background-color: #FFFFFF;
     border-radius: 16px;
+    box-shadow: 10px 0px 20px rgb(32 32 32 / 32%);
 }
 .durationInfo img {
     max-width: calc(8.8vw + 259.7px);
@@ -392,7 +421,7 @@ button.durationDetails {
 button.durationDetails:hover {
     background-color: #4C70B5;
     color: #FFFFFF;
-    border: none;
+    border: 1px solid #4C70B5;
 }
 
 /* Третья страница */
@@ -403,6 +432,17 @@ button.durationDetails:hover {
 h2.productsTitle {
     margin-bottom: calc(2vw + 9.4px);
 }
+.productsContainer {
+    display: flex;
+    flex-direction: column;
+}
+.productsInfo {
+    display: flex;
+    gap: 32px;
+}
+.productsCloth:last-child {
+    display: none;
+}
 .productsCloth {
     display: flex;
     background-color: #d1dbeb;
@@ -411,6 +451,7 @@ h2.productsTitle {
     height: 308px;
     padding-left: calc(1.4vw + 19.6px);
     margin-bottom: 32px;
+    box-shadow: 10px 7px 20px rgb(24 24 24 / 32%);
 }
 .productsEmblem {
     display: flex;
@@ -421,6 +462,7 @@ h2.productsTitle {
     height: 308px;
     padding-left: calc(1.4vw + 19.6px);
     margin-bottom: 32px;
+    box-shadow: -10px 7px 20px rgb(24 24 24 / 32%);
 }
 .productsLogo {
     display: flex;
@@ -431,6 +473,7 @@ h2.productsTitle {
     height: 308px;
     padding-left: calc(1.4vw + 19.6px);
     margin-bottom: 32px;
+    box-shadow: 10px 7px 20px rgb(24 24 24 / 32%);
 }
 .products3D {
     display: flex;
@@ -441,6 +484,7 @@ h2.productsTitle {
     height: 308px;
     padding-left: calc(1.4vw + 19.6px);
     margin-bottom: 32px;
+    box-shadow: -10px 7px 20px rgb(24 24 24 / 32%);
 }
 .productsCloth img {
     width: 207px;    
@@ -494,7 +538,7 @@ h2.productsTitle {
 button.orderProducts {
     background-color: #D44D60;
     color: #FFFFFF;
-    border: none;
+    border: 1px solid #D44D60;
     border-radius: 8px;
     padding: 16px 24px;
 }
@@ -520,6 +564,7 @@ button.detailsProducts:hover {
     padding: 16px 24px;
 }
 
+
 /* Четвертая страница */
 
 .example {
@@ -536,6 +581,7 @@ button.detailsProducts:hover {
 .exampleLeft img {
     width: 392px;
     border-radius: 16px;
+    box-shadow: 10px 0px 20px rgb(32 32 32 / 32%);
 }
 .exampleRight {
     display: flex;
@@ -549,10 +595,12 @@ button.detailsProducts:hover {
 .exampleRightImg img:first-child {
     width: 498px;
     border-radius: 16px;
+    box-shadow: 10px 0px 20px rgb(32 32 32 / 32%);
 }
 .exampleRightImg img:last-child {
     width: 277px;
     border-radius: 16px;
+    box-shadow: -10px 0px 20px rgb(32 32 32 / 32%);
 }
 .examplePhone {
     display: none;
@@ -560,6 +608,7 @@ button.detailsProducts:hover {
 .exampleInfo {
     background-color: #d1dbeb;
     border-radius: 16px;
+    box-shadow: -10px -10px 20px rgb(32 32 32 / 32%);
     padding: calc(3.7vw + 8.1px) calc(10.9vw - 15px) calc(3.7vw + 8.1px) calc(1.7vw + 14.6px);
 }
 .exampleInfo h3 {
@@ -596,14 +645,19 @@ button.detailsProducts:hover {
 .istokprom {
     padding: calc(1.7vw + 14.6px) calc(9.7vw - 15px) calc(3.4vw + 29.2px);
     background-color: #d1dbeb;
+    background-image: url('/img/Rectangle.png');
+    background-repeat: no-repeat;
 }
 .istokpromContainer {
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 10px 0px 20px rgb(32 32 32 / 32%);
+    border-radius: 16px;
+    height: 455px;
 }
 .istokpromImg img {
     width: 560px;
-    height: 452px;
+    height: 455px;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
@@ -612,8 +666,8 @@ button.detailsProducts:hover {
     background-color: #FFFFFF;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
-    width: 670px;
-    height: 452px;
+    width: 675px;
+    height: 455px;
 }
 .istokpromInfo h2 {
     margin-bottom: 24px;
@@ -653,13 +707,13 @@ button.detailsProducts:hover {
 .stageWrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
     padding: calc(2vw + 9.5px) 0 calc(1vw + 16.8px);
 }
 .stageCointainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
 }
 .stageInfo {
     display: flex;
@@ -667,8 +721,10 @@ button.detailsProducts:hover {
     gap: 28px;
     padding: calc(0.5vw + 22.4px) calc(0.7vw + 13.9px);
     width: calc(8.8vw + 259.8px);
+    height: calc(4.7vw + 72.8px);
     background-color: #FFFFFF;
     border-radius: 16px;
+    box-shadow: 1px 1px 40px 0px rgb(32 32 32 / 24%)
 }
 .stageInfo p {
     font-weight: 400;
@@ -679,7 +735,7 @@ button.detailsProducts:hover {
 .stage button {
     background-color: #D44D60;
     color: #FFFFFF;
-    border: none;
+    border: 1px solid #D44D60;
     padding: 16px 40px;
 }
 .stage button:hover {
@@ -687,6 +743,21 @@ button.detailsProducts:hover {
     color: #D44D60;
     border: 1px solid #D44D60;
     padding: 16px 40px;
+}
+.stageLine {
+    width: 25px;
+    height: 0;
+    border: 2px solid#4C70B5;
+}
+.stageStripContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 420px;
+}
+.stageStrip {
+    width: 0;
+    height: 25px;
+    border: 2px solid#4C70B5; 
 }
 /* Седьмая страница */
 
@@ -716,10 +787,11 @@ button.detailsProducts:hover {
     background-color: #d1dbeb;
     border-radius: 16px;
     width: 600px;
+    box-shadow: 19px 20px 20px 0px rgb(32 32 32 / 24%)
 }
 .workerWrapper img {
     width: 268px;
-    height: 268px;
+    height: auto;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
 }
@@ -744,6 +816,7 @@ button.detailsProducts:hover {
     background-color: #4C70B5;
     border-radius: 16px;
     width: 600px;
+    box-shadow: 19px 20px 20px 0px rgb(32 32 32 / 24%)
 }
 .workerActionInfo {
     padding: calc(0.7vw + 17.9px) calc(1.3vw + 16px) calc(1vw + 12.7px) calc(1.7vw + 14.6px);
@@ -760,18 +833,17 @@ button.detailsProducts:hover {
 .workerActionInfo button {
     background-color: #FFFFFF;
     color: #4C70B5;
-    border: none;
-    padding: 16px calc(1.5vw + 12.5px);
+    border: 1px solid #FFFFFF;
+    padding: 16px 35px;
 }
 .workerActionInfo button:hover {
     background-color: #4C70B5;
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
-    padding: 16px calc(1.5vw + 12.5px);
 }
 .workerAction img {
     width: 310px;
-    height: 270px;
+    height: auto;
     padding-top: 40px;
     padding-right: 20px;
     
@@ -779,8 +851,12 @@ button.detailsProducts:hover {
 
 /* Восьмая страница */
 
+.clientsImg {
+    display: flex;
+    gap: 12px;
+}
 .clientsImg img {
-    width: 1240px;
+    margin-bottom: calc(3.7vw + 56px);
 }
 
 /* Девятая страница */
@@ -802,6 +878,7 @@ button.detailsProducts:hover {
     padding-bottom: 24px;
     height: 368px;
     margin-bottom: calc(1vw + 8.7px);
+    box-shadow: 2px 7px 10px 0px rgb(32 32 32 / 24%)
 }
 .review-header {
     display: flex;
@@ -868,6 +945,7 @@ button.detailsProducts:hover {
     align-items: center;
     background-color: #FFFFFF;
     border-radius: 16px;
+    box-shadow: 11px 11px 20px 0px rgb(32 32 32 / 24%)
 }
 .formInfo {
     display: flex;
@@ -921,7 +999,7 @@ button.detailsProducts:hover {
 .formInfo button {
     background-color: #D44D60;
     color: #FFFFFF;
-    border: none;
+    border: 1px solid #D44D60;
     padding: 16px 40px;
 }
 .formInfo button:hover {
@@ -1038,7 +1116,6 @@ footer {
 }
 .footer-column ul li a:hover {
     color: #E1004A;
-    text-decoration: underline;
 }
 /* Правая часть footer */
 .footer-column-right {
@@ -1077,7 +1154,7 @@ footer {
     line-height: 20px;
     background-color: #D44D60;
     color: white;
-    border: none;
+    border: 1px solid #D44D60;
     padding: 16px 40px;
     font-size: 14px;
     border-radius: 5px;
@@ -1156,12 +1233,19 @@ footer {
         width: 288px;
     }
     /* Третья страница */
+    .productsContainer {
+        display: none;
+    }
+    .productsCloth:last-child {
+        display: flex;
+    }
     .productsCloth {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 484px;
         padding-left: 0;
+        box-shadow: 0px 8px 10px rgb(24 24 24 / 32%);
     }
     .productsCloth img {
         width: 132px;
@@ -1175,6 +1259,7 @@ footer {
         align-items: center;
         height: 484px;
         padding-left: 0;
+        box-shadow: 0px 8px 10px rgb(24 24 24 / 32%);
     }
     .productsEmblem img {
         width: 179px;
@@ -1188,6 +1273,7 @@ footer {
         align-items: center;
         height: 484px;
         padding-left: 0;
+        box-shadow: 0px 8px 10px rgb(24 24 24 / 32%);
     }
     .productsLogo img {
         width: 179px;
@@ -1201,6 +1287,7 @@ footer {
         align-items: center;
         height: 484px;
         padding-left: 0;
+        box-shadow: 0px 8px 10px rgb(24 24 24 / 32%);
     }
     .products3D img {
         width: 179px;
@@ -1259,6 +1346,9 @@ footer {
         padding: 13px;
     }
     /* Пятая страница */
+    .istokpromContainer {
+        height: auto;
+    }
     .istokpromImg img {
         width: 288px;
         height: 240px;
@@ -1273,6 +1363,20 @@ footer {
         border-bottom-right-radius: 16px;
         border-top-right-radius: 0;
         height: 620px;
+    }
+    /* Шестая страница */
+    .stageStripContainer {
+        gap: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .stageLine {
+        display: flex;
+        align-items: center;
+        width: 0;
+        height: 25px;
+        margin-left: 142px;
     }
     /* Седьмая страница */
     .workerContainer {
@@ -1318,7 +1422,7 @@ footer {
     }
     /* Восьмая страница */
     .clientsImg img {
-        width: 400px;
+        width: 70px;
     }
     /* Девятая страница */
     .review-header {

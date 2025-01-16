@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embroidery</title>
+    <title>Istokprom</title>
     <link rel="stylesheet" href="./splide-4.1.3/dist/css/splide.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./fonts/Roboto/LICENSE.txt">
@@ -12,24 +12,26 @@
     <header>
         <div class="header-container">
             <div class="header-logo">
-                <img src="/img/logo.png" alt="Логотип" class="logo">
+                <a href="/index.html">
+                    <img src="/img/logo.png" alt="Логотип" class="logo" href="/index.html">
+                </a>
             </div>
             <div class="header-left">
                 <div class="pin">
                     <img src="/img/pin.png" alt="">
-                    <p>Производство машинной вышивки в <span class="city-highlight">Иваново</span>
+                    <p>Производство машинной вышивки в <a href="" class="city-highlight">Иваново</a>
                     </p>
                 </div>
                 <nav class="header-nav">
-                    <a href="#">О компании</a>
-                    <a href="#">Наши услуги</a>
-                    <a href="#">Цены</a>
-                    <a href="#">Контакты</a>
+                    <a href="/pages/about.html">О компании</a>
+                    <a href="/pages/product.html">Наши услуги</a>
+                    <a href="/pages/price.html">Цены</a>
+                    <a href="/pages/contact.html">Контакты</a>
                 </nav>
             </div>
             <div class="header-search">
                 <img src="/img/search.png" alt="">
-                <input type="text" placeholder="Поиск">
+                <input type="search" placeholder="Поиск">
             </div>
             <div class="header-contacts">
                 <div class="header-phone">
@@ -54,7 +56,7 @@
                   <span></span>
                 </div>
                 <ul class="nav-links" id="nav-links">
-                  <li><a href="#home">Главная</a></li>
+                  <li><a href="/pages/about.html">О компании</a></li>
                   <li><a href="#services">Услуги</a></li>
                   <li><a href="#about">О нас</a></li>
                   <li><a href="#contact">Контакты</a></li>
@@ -123,6 +125,66 @@
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
+                    <div class="productsContainer">
+                        <div class="productsInfo">
+                            <div class="productsCloth">
+                                <div class="productsText">
+                                    <p>Вышивка на одежде</p>
+                                    <span>Вышивка на одежде по многим показателям превосходит 
+                                          другие методы нанесения, такие как шелкография 
+                                          или трансферная печать. 
+                                    </span>
+                                    <div class="productsButton">
+                                        <button class="orderProducts">Заказать</button>
+                                        <button class="detailsProducts">Подробнее</button>
+                                    </div>
+                                </div>
+                                <img src="./img/products1.png" alt="Вышивка на одежде">
+                            </div>
+                            <div class="productsEmblem">
+                                <div class="productsText">
+                                    <p>Вышивка эмблем и гербов</p>
+                                    <span>Выполняется на ткани разной<br> плотности и состава, 
+                                          элементах кроя.
+                                    </span>
+                                    <div class="productsButton">
+                                        <button class="orderProducts">Заказать</button>
+                                        <button class="detailsProducts">Подробнее</button>
+                                    </div>
+                                </div>
+                                <img src="./img/products2.png" alt="Вышивка эмблем и гербов">
+                            </div>
+                        </div>
+                        <div class="productsInfo">
+                            <div class="productsLogo">
+                                <div class="productsText">
+                                    <p>Вышивка логотипов</p>
+                                    <span>В «Студии Исток-Пром» можно заказать вышивку 
+                                            логотипа на ткани, элементах кроя, готовых изделиях.
+                                    </span>
+                                    <div class="productsButton">
+                                        <button class="orderProducts">Заказать</button>
+                                        <button class="detailsProducts">Подробнее</button>
+                                    </div>
+                                </div>
+                                <img src="./img/products3.png" alt="Вышивка логотипов">
+                            </div>
+                            <div class="products3D">
+                                <div class="productsText">
+                                    <p>3D вышивка</p>
+                                    <span>3D вышивка - это технология<br> нанесения выпуклого рисунка
+                                          на<br> ткань, которым обычно украшают одежду, 
+                                          головные уборы, аксессуары.
+                                    </span>
+                                    <div class="productsButton">
+                                        <button class="orderProducts">Заказать</button>
+                                        <button class="detailsProducts">Подробнее</button>
+                                    </div>
+                                </div>
+                                <img src="./img/products4.png" alt="3D вышивка">
+                            </div>
+                        </div>
+                    </div>
                     <div class="productsCloth">
                         <div class="productsText">
                             <p>Вышивка на одежде</p>
@@ -269,38 +331,54 @@
                     <img src="./img/stage1.png" alt="">
                     <p>Вы оставляете заявку у нас на сайте</p>
                 </div>
+                <div class="stageLine"></div>
                 <div class="stageInfo">
                     <img src="/img/stage2.png" alt="">
                     <p>Мы уточняем детали, делаем расчёт</p>
                 </div>
+                <div class="stageLine"></div>
                 <div class="stageInfo">
                     <img src="/img/stage3.png" alt="">
                     <p>Согласовываем с вами заказ</p>
                 </div>
+            </div>
+            <div class="stageStripContainer">
+                <div></div>
+                <div></div>
+                <div class="stageStrip"></div>
             </div>
             <div class="stageCointainer">
                 <div class="stageInfo">
                     <img src="/img/stage4.png" alt="">
                     <p>Утверждаем образец вышивки</p>
                 </div>
+                <div class="stageLine"></div>
                 <div class="stageInfo">
                     <img src="/img/stage5.png" alt="">
                     <p>Разрабатываем программу, вышиваем образец</p>
                 </div>
+                <div class="stageLine"></div>
                 <div class="stageInfo">
                     <img src="/img/stage6.png" alt="">
                     <p>Принимаем оплату удобным для вас способом</p>
                 </div>
+            </div>
+            <div class="stageStripContainer">
+                <div class="stageStrip"></div>
+                <div></div>
+                <div></div>
             </div>
             <div class="stageCointainer">
                 <div class="stageInfo">
                     <img src="/img/stage7.png" alt="">
                     <p>Вышиваем заказ, обрабатываем, упаковываем</p>
                 </div>
+                <div class="stageLine"></div>
                 <div class="stageInfo">
                     <img src="/img/stage8.png" alt="">
                     <p>Сдаём заказ со склада или доставляем</p>
                 </div>
+                <div class="stageLine"></div>
                 <div class="stageInfo">
                     <img src="/img/stage9.png" alt="">
                     <p>90% клиентов размещают у нас новый заказ</p>
@@ -371,13 +449,25 @@
             <ul class="splide__list">
                 <li class="splide__slide">
                     <div class="clientsImg">
-                        <img src="/img/clients.png" alt="clients">
+                        <img src="/img/clients_rzhd.png" alt="clients">
+                        <img src="/img/clients_gazprom.png" alt="clients">
+                        <img src="/img/clients_mvideo.png" alt="clients">
+                        <img src="/img/clients_teztur.png" alt="clients">
+                        <img src="/img/clients_rosneft.png" alt="clients">
                     </div>
                 </li>
-                <li class="splide__slide"></li>
-                <li class="splide__slide"></li>
-                <li class="splide__slide"></li>
-                <li class="splide__slide"></li>
+                <li class="splide__slide">
+                    
+                </li>
+                <li class="splide__slide">
+                    
+                </li>
+                <li class="splide__slide">
+                    
+                </li>
+                <li class="splide__slide">
+                    
+                </li>
               </ul>
         </div>
     </section>
@@ -528,7 +618,7 @@
         document.addEventListener( 'DOMContentLoaded', function() {
           var splide = new Splide( '.splide.products',{
             type:'loop',
-            perPage:2,
+            perPage:1,
             rewind:true,
             pagination:true,
             paginationType:'progressbar',
@@ -560,11 +650,18 @@
     <script>
         document.addEventListener( 'DOMContentLoaded', function() {
           var splide = new Splide( '.splide.clients',{
-            perPage:1,
+            perPage:5,
             rewind:true,
             pagination:false,
             arrows:true,
             keyboard:true,
+            gap: "12px",
+            breakpoints: {
+                320: {
+                    perPage:2,
+                    gap: "2px",
+                },
+            },
           });
           splide.mount();
         } );
